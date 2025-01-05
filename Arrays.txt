@@ -1,0 +1,158 @@
+ARRAYS:
+Array is a linear data structure that stores a collection of elements of the same data type. 
+Each element has a unique index number.
+
+Arrays in C#.
+1. All arrays are dynamically allocated.
+2. A C# array variable can also be declared like other variables with [] after the data type. 
+3. The variables in the array are ordered and each has an index beginning from 0.
+4. C# array is an object of base type System.Array.
+
+As said earlier, an array is a reference type so the new keyword used to create an instance of the array. We can assign initialize individual array elements, with the help of the index. Syntax :
+
+type [ ] < Name_Array > = new < datatype > [size];
+Here, type specifies the type of data being allocated, size specifies the number of elements in the array, and Name_Array is the name of an array variable. And new will allocate memory to an array according to its size. Examples : To Show Different ways for the Array Declaration and Initialization  Example 1 :
+
+// defining array with size 5. 
+// But not assigns values
+int[] intArray1 = new int[5]; 
+The above statement declares & initializes int type array that can store five int values. The array size is specified in square brackets([]). Example 2 :
+
+// defining array with size 5 and assigning
+// values at the same time
+int[] intArray2 = new int[5]{1, 2, 3, 4, 5};
+The above statement is the same as, but it assigns values to each index in {}. Example 3 :
+
+// defining array with 5 elements which 
+// indicates the size of an array
+int[] intArray3 = {1, 2, 3, 4, 5};
+
+Types of Arrays
+
+One Dimensional Array
+
+In this array contains only one row for storing the values. All values of this array are stored contiguously starting from 0 to the array size. For example, declaring a single-dimensional array of 5 integers :
+
+int[] arrayint = new int[5];
+
+Multidimensional Arrays
+
+The multi-dimensional array contains more than one row to store the values. It is also known as a Rectangular Array in C# because it’s each row length is same. It can be a 2D-array or 3D-array or more. To storing and accessing the values of the array, one required the nested loop. The multi-dimensional array declaration, initialization and accessing is as follows :
+
+// creates a two-dimensional array of 
+// four rows and two columns.
+int[, ] intarray = new int[4, 2];
+
+//creates an array of three dimensions, 4, 2, and 3
+int[,, ] intarray1 = new int[4, 2, 3];
+
+Jagged Arrays
+
+An array whose elements are arrays is known as Jagged arrays it means “array of arrays“. The jagged array elements may be of different dimensions and sizes. Below are the examples to show how to declare, initialize, and access the jagged arrays. 
+
+
+ARRAY PROBLEMS.
+
+1. Print Alternates.
+
+Examples: Given an array arr[], the task is to print every alternate element of the array starting from the first element.
+
+Examples:
+
+Input: arr[] = [10, 20, 30, 40, 50]
+Output: 10 30 50
+Explanation: Print the first element (10), skip the second element (20), print the third element (30), skip the fourth element(40) and print the fifth element(50).
+
+
+Input: arr[] = [-5, 1, 4, 2, 12]
+Output: -5 4 12
+
+
+ITERATIVE APPROACH.
+The idea is to start iterating from index 0, print the element at that index, and then increment the index by 2 to move to the next alternate element. Keep on printing the elements till we reach the end of the array.
+
+// Iterate C# Program to print alternate elements
+// of the array
+
+using System;
+using System.Collections.Generic;
+
+class GfG {
+    static List<int> getAlternates(int[] arr) {
+        List<int> res = new List<int>();
+      
+        // Iterate over all alternate elements
+        for (int i = 0; i < arr.Length; i += 2) {
+            res.Add(arr[i]);
+        }
+        return res;
+    }
+
+    static void Main() {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        List<int> res = getAlternates(arr);
+        foreach (int x in res) {
+            Console.Write(x + " ");
+        }
+    }
+}
+
+
+
+//JAVASCRIPT
+// Iterate JavaScript Program to print alternate elements
+// of the array
+
+function getAlternates(arr) {
+    let res = [];
+    
+    // Iterate over all alternate elements
+    for (let i = 0; i < arr.length; i += 2) {
+        res.push(arr[i]);
+    }
+    return res;
+}
+
+
+// Driver Code
+const arr = [10, 20, 30, 40, 50];
+const res = getAlternates(arr);
+console.log(res.join(" "));
+
+
+Recursive approach
+// Recursive C# Program to print alternate elements
+// of the array
+
+using System;
+using System.Collections.Generic;
+
+class GfG {
+    
+    // Recursive function to store all alternate elements
+    static void getAlternatesRec(int[] arr, int idx, 
+                                     List<int> res) {
+        if (idx < arr.Length) {
+            res.Add(arr[idx]);
+            getAlternatesRec(arr, idx + 2, res);
+        }
+    }
+
+    static List<int> getAlternates(int[] arr) {
+        List<int> res = new List<int>();
+        getAlternatesRec(arr, 0, res);
+        return res;
+    }
+
+    static void Main() {
+        int[] arr = { 10, 20, 30, 40, 50 };
+        List<int> res = getAlternates(arr);
+        foreach (int x in res) {
+            Console.Write(x + " ");
+        }
+    }
+}
+
+
+2. LINEAR SEARCH
+
