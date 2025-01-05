@@ -233,8 +233,37 @@ function search(arr, n, x)
 
 
 
+Question: Linear Search in an Array
+Write a C# program to search for a specific number in an array of integers. The program should meet the following requirements:
+
+Input:
+
+An array of integers: {5, 12, 8, 19, 27, 3, 15, 8}
+A number to search for (e.g., 8).
+Output:
+
+If the number is found in the array, print all the indices where it occurs (since it might appear more than once).
+If the number is not found, print a message saying, "Number not found in the array."
+Bonus Task:
+
+Count how many times the number appears in the array and display this count.
 
 
+Applications of Linear Search Algorithm:
+Unsorted Lists: When we have an unsorted array or list, linear search is most commonly used to find any element in the collection.
+Small Data Sets: Linear Search is preferred over binary search when we have small data sets with
+Searching Linked Lists: In linked list implementations, linear search is commonly used to find elements within the list. Each node is checked sequentially until the desired element is found.
+Simple Implementation: Linear Search is much easier to understand and implement as compared to Binary Search or Ternary Search.
+Advantages of Linear Search Algorithm:
+Linear search can be used irrespective of whether the array is sorted or not. It can be used on arrays of any data type.
+Does not require any additional memory.
+It is a well-suited algorithm for small datasets.
+Disadvantages of Linear Search Algorithm:
+Linear search has a time complexity of O(N), which in turn makes it slow for large datasets.
+Not suitable for large arrays.
+When to use Linear Search Algorithm?
+When we are dealing with a small dataset.
+When you are searching for a dataset stored in contiguous memory.
 
 
 

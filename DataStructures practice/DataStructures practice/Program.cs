@@ -29,27 +29,59 @@ class Program
 
         //For example: Consider the array arr[] = { 10, 50, 30, 70, 80, 20, 90, 40 } and key = 30
 
-        int[] arrL = { 10, 20, 30, 70, 80, 20, 90, 40 };
+        //int[] arrL = { 10, 20, 30, 70, 80, 20, 90, 40 };
 
-        int key = 30;
+        //int key = 30;
 
+        //bool found = false;
+        //int count = 0;
+
+
+        //for (int i = 0; i < arrL.Length; i++)
+        //{
+        //    if (arrL[i] == key)
+        //    {
+        //        //return i;
+        //        Console.WriteLine(i);
+        //        found = true;
+        //    }
+        //}
+        //if (!found)
+        //{
+        //    //return -1;
+        //    Console.WriteLine("Key not found");
+        //}
+
+       
+
+        int[] arrX = { 5, 12, 8, 19, 27, 3, 15, 8 };
+        int s = 8;
         bool found = false;
+        int count = 0;
 
 
-        for (int i = 0; i < arrL.Length; i++)
-        {
-            if (arrL[i] == key)
+        for (int i = 0; i < arrX.Length; i++) {
+            if (arrX[i] == s) 
             {
-                //return i;
-                Console.WriteLine(i);
+                return i;
+            found = true;
+                Console.Write(i + " ");
+                count++;
+
                 found = true;
+               
+            }
+            if (!found)
+            {
+                //return -1;
+                Console.WriteLine("Number not found in the array.");
+            }
+            else
+            {
+                Console.WriteLine("Count" + count);
             }
         }
-        if (!found)
-        {
-            //return -1;
-            Console.WriteLine("Key not found");
-        }
+
         #endregion
     }
 }
