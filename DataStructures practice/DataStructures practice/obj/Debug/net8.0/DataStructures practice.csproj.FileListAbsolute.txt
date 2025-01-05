@@ -12,3 +12,4 @@ C:\Users\User\Desktop\All Works and Projects\DSA LEARNING\DataStructures practic
 C:\Users\User\Desktop\All Works and Projects\DSA LEARNING\DataStructures practice\DataStructures practice\obj\Debug\net8.0\DataStructures practice.pdb
 C:\Users\User\Desktop\All Works and Projects\DSA LEARNING\DataStructures practice\DataStructures practice\obj\Debug\net8.0\DataStructures practice.genruntimeconfig.cache
 C:\Users\User\Desktop\All Works and Projects\DSA LEARNING\DataStructures practice\DataStructures practice\obj\Debug\net8.0\ref\DataStructures practice.dll
+C:\Users\User\Desktop\All Works and Projects\DSA LEARNING\DataStructures practice\DataStructures practice\obj\Debug\net8.0\DataStructures practice.sourcelink.json
