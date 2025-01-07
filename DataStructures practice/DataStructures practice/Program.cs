@@ -90,25 +90,55 @@ class Program
         //LARGEST ELEMENT IN AN ARRAY
 
         //Iterative Approach
-        int[] arr = { 10, 324, 45, 90, 9808 };
+        //int[] arr = { 10, 324, 45, 90, 9808 };
 
-        int max = arr[0]; //first element is the max from the start
+        //int max = arr[0]; //first element is the max from the start
 
-        for (int i = 1; i < arr.Length; i++) //loop through all elements from the first to determine the max
+        //for (int i = 1; i < arr.Length; i++) //loop through all elements from the first to determine the max
+        //{ 
+        //    if(arr[i] > max) //conditions to check largest element 
+        //    {
+        //      max = arr[i];
+        //    }
+        //}
+        //Console.WriteLine("Largest element " + max);
+
+        ////Other simple way
+        ////LIBRARY METHOD
+
+        //int theMax  = arr.Max();
+
+        //Console.WriteLine("Largest element " + theMax);
+
+
+        //Bonus challenge solution
+        int[] arr = { -10, 0, 15, -20, 15,15 };
+
+        // Handle empty array
+        if (arr.Length == 0)
+        {
+            Console.WriteLine("The array is empty. No largest element found.");
+            return;
+        }
+
+        int max = arr[0];
+        int count = 0;
+
+        for (int i = 1; i < arr.Length; i++) 
         { 
-            if(arr[i] > max) //conditions to check largest element 
+            if (arr[i] > max)
             {
-              max = arr[i];
+                max = arr[i];
+               
+                count = 1;
+            }else if (arr[i] == max)
+            {
+                count++;
             }
         }
+
         Console.WriteLine("Largest element " + max);
-
-        //Other simple way
-        //LIBRARY METHOD
-
-        int theMax  = arr.Max();
-
-        Console.WriteLine("Largest element " + theMax);
+        Console.WriteLine("Count of largest element " + count);
 
         #endregion
     }

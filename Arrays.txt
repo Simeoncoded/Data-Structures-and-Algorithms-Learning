@@ -374,6 +374,31 @@ function largest(arr) {
 const arr = [10, 324, 45, 90, 9808];
 console.log(largest(arr));
 
+Bonus Challenge
+
+Write a C# program to find the largest element in an array of integers. However, the array may include negative numbers, duplicates, and could have varying lengths.
+
+Additionally:
+
+If the array is empty, your program should print a message like: "The array is empty. No largest element found."
+If the array has only one element, that element should be considered the largest.
+Test your program with multiple test cases to handle edge cases like:
+Arrays with all negative numbers.
+Arrays with duplicate largest elements.
+Arrays with a single element.
+Empty arrays.
+Input:
+An array of integers (e.g., { -10, 0, 15, -20, 15 }).
+
+Output:
+The largest element in the array, or an appropriate message if the array is empty.
+
+Sample Test Cases:
+Test Case 1:
+Input:
+int[] arr = { -10, 0, 15, -20, 15 };
+Output:
+The largest element is: 15
 
 
 
