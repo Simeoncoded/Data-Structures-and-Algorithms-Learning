@@ -88,6 +88,21 @@ class Program
 
         ///PROBLEM THREE
         //LARGEST ELEMENT IN AN ARRAY
+
+        //Iterative Approach
+        int[] arr = { 10, 324, 45, 90, 9808 };
+
+        int max = arr[0]; //first element is the max from the start
+
+        for (int i = 1; i < arr.Length; i++) //loop through all elements from the first to determine the max
+        { 
+            if(arr[i] > max) //conditions to check largest element 
+            {
+              max = arr[i];
+            }
+        }
+        Console.WriteLine("Largest element " + max);
+
         #endregion
     }
 }

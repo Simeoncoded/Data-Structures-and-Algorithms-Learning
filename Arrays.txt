@@ -267,6 +267,83 @@ When you are searching for a dataset stored in contiguous memory.
 
 3. LARGEST ELEMENT IN AN ARRAY
 
+Given an array arr. The task is to find the largest element in the given array. 
+
+Examples: 
+
+Input: arr[] = [10, 20, 4]
+Output: 20
+Explanation: Among 10, 20 and 4, 20 is the largest. 
+
+
+Input: arr[] = [20, 10, 20, 4, 100]
+Output: 100
+
+
+Iterative Approach – O(n) Time and O(1) Space
+The approach to solve this problem is to traverse the whole array and find the maximum among them.
+
+Meaning of Travserse: Journey Through
+
+
+C# CODE
+using System;
+using System.Collections.Generic;
+
+class GfG {
+    static int Largest(List<int> arr) {
+        int max = arr[0];
+
+        // Traverse from second and compare
+        // every element with current max
+        for (int i = 1; i < arr.Count; i++)
+            if (arr[i] > max)
+                max = arr[i];
+
+        return max;
+    }
+
+    static void Main() {
+        List<int> arr = new List<int> { 10, 324, 45, 90, 9808 };
+        Console.WriteLine(Largest(arr));
+    }
+}
+
+Javascript Code:
+function largest(arr) {
+    let max = arr[0];
+
+    // Traverse from second and compare
+    // every element with current max
+    for (let i = 1; i < arr.length; i++)
+        if (arr[i] > max)
+            max = arr[i];
+
+    return max;
+}
+
+// Driver Code
+const arr = [10, 324, 45, 90, 9808];
+console.log(largest(arr));
+
+
+What Would Happen if We Started from the First Element?
+If the loop started from i = 0:
+
+csharp
+Copy code
+for (int i = 0; i < arr.Count; i++)
+    if (arr[i] > max)
+        max = arr[i];
+The first iteration would compare arr[0] with max (which is also arr[0] initially).
+Since arr[0] is equal to max, the value of max would remain unchanged.
+The program would still work correctly, but the first comparison is unnecessary and adds a tiny bit of inefficiency.
+Why This Approach is Better
+By starting from the second element (i = 1):
+
+We save one unnecessary comparison.
+The code is cleaner because the first element is already accounted for.
+
 
 
 
