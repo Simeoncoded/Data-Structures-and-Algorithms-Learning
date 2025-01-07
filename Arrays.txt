@@ -265,6 +265,8 @@ When to use Linear Search Algorithm?
 When we are dealing with a small dataset.
 When you are searching for a dataset stored in contiguous memory.
 
+3. LARGEST ELEMENT IN AN ARRAY
+
 
 
 

@@ -9,7 +9,8 @@ class Program
     {
         #region BASIC PROBLEMS ON ARRAY
 
-        // printing alternate values  
+        ///PROBLEM ONE
+        // PRINTING ALTERNATE VALUES EXAMPLE
         //int[] arr = { 10, 20, 30, 40, 50 };
 
         //for (int i = 0; i < arr.Length; i += 2)
@@ -19,6 +20,8 @@ class Program
         //}
 
 
+
+        ///PROBLEM TWO
         //LINEAR SEARCH ALGORITHM
 
         //In Linear Search, we iterate over all the elements of the array and check if it 
@@ -52,36 +55,39 @@ class Program
         //    Console.WriteLine("Key not found");
         //}
 
-       
 
-        int[] arrX = { 5, 12, 8, 19, 27, 3, 15, 8 };
-        int s = 8;
-        bool found = false;
-        int count = 0;
+        //COMPLEX PROBLEM- SIMEONS SOLUTION(LINEAR SEARCH ALGORITHM)
+        //int[] arrX = { 5, 12, 8, 19, 27, 3, 15, 8 };
+        //int s = 8;
+        //bool found = false;
+        //int count = 0;
 
 
-        for (int i = 0; i < arrX.Length; i++) {
-            if (arrX[i] == s) 
-            {
-                return i;
-            found = true;
-                Console.Write(i + " ");
-                count++;
+        //for (int i = 0; i < arrX.Length; i++) {
+        //    if (arrX[i] == s) 
+        //    {
+        //        //return i;
+        //    found = true;
+        //        Console.Write(i + " ");
+        //        count++;
 
-                found = true;
-               
-            }
-            if (!found)
-            {
-                //return -1;
-                Console.WriteLine("Number not found in the array.");
-            }
-            else
-            {
-                Console.WriteLine("Count" + count);
-            }
-        }
+        //        found = true;
 
+        //    }
+        //    if (!found)
+        //    {
+        //        //return -1;
+        //        Console.WriteLine("Number not found in the array.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Count" + count);
+        //    }
+        //}
+
+
+        ///PROBLEM THREE
+        //LARGEST ELEMENT IN AN ARRAY
         #endregion
     }
 }
