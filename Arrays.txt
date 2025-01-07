@@ -345,6 +345,36 @@ We save one unnecessary comparison.
 The code is cleaner because the first element is already accounted for.
 
 
+LIBRARY METHOD APPROACH(THE MOST SIMPLEST APPROACH)
+Most of the languages have a relevant max() type in-built function to find the maximum element, such as  std::max_element in C++. We can use this function to directly find the maximum element.  
+
+C# CODE
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class GfG {
+  static int largest(List<int> arr) {
+          return arr.Max();
+      }
+  
+    static public void Main() {
+         List<int> arr = new List<int> { 10, 324, 45, 90, 9808 };
+        Console.WriteLine(largest(arr));
+    }
+}
+
+Javascript CODE
+// Function to find the largest number in an array
+function largest(arr) {
+    return Math.max(...arr);
+}
+
+// Driver Code
+const arr = [10, 324, 45, 90, 9808];
+console.log(largest(arr));
+
+
 
 
 

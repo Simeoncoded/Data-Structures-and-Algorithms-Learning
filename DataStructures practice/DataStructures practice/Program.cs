@@ -103,6 +103,13 @@ class Program
         }
         Console.WriteLine("Largest element " + max);
 
+        //Other simple way
+        //LIBRARY METHOD
+
+        int theMax  = arr.Max();
+
+        Console.WriteLine("Largest element " + theMax);
+
         #endregion
     }
 }
