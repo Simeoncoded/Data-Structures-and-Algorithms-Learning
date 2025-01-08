@@ -111,34 +111,71 @@ class Program
         //Console.WriteLine("Largest element " + theMax);
 
 
-        //Bonus challenge solution
-        int[] arr = { -10, 0, 15, -20, 15,15 };
+        ////Bonus challenge solution
+        //int[] arr = { -10, 0, 15, -20, 15,15 };
 
-        // Handle empty array
-        if (arr.Length == 0)
+        //// Handle empty array
+        //if (arr.Length == 0)
+        //{
+        //    Console.WriteLine("The array is empty. No largest element found.");
+        //    return;
+        //}
+
+        //int max = arr[0];
+        //int count = 0;
+
+        //for (int i = 1; i < arr.Length; i++) 
+        //{ 
+        //    if (arr[i] > max)
+        //    {
+        //        max = arr[i];
+
+        //        count = 1;
+        //    }else if (arr[i] == max)
+        //    {
+        //        count++;
+        //    }
+        //}
+
+        //Console.WriteLine("Largest element " + max);
+        //Console.WriteLine("Count of largest element " + count);
+
+
+
+        ///PROBLEM FOUR
+        // SECOND LARGEST ELEMENT IN AN ARRAY
+
+        int[] arr = { 12, 35, 1, 10, 34, 1 };
+
+        int largest = -1; int secondLargest = -1;
+
+        // finding the second largest element
+        for (int i = 0; i < arr.Length; i++) 
         {
-            Console.WriteLine("The array is empty. No largest element found.");
-            return;
-        }
 
-        int max = arr[0];
-        int count = 0;
-
-        for (int i = 1; i < arr.Length; i++) 
-        { 
-            if (arr[i] > max)
+            // If arr[i] > largest, update second largest with
+            // largest and largest with arr[i]
+            if (arr[i] > largest)
             {
-                max = arr[i];
-               
-                count = 1;
-            }else if (arr[i] == max)
+                secondLargest = largest;
+                largest = arr[i];
+            }  // If arr[i] < largest and arr[i] > second largest, 
+            // update second largest with arr[i]
+            else if (arr[i] < largest && arr[i] > secondLargest)
             {
-                count++;
+                secondLargest = arr[i];
+                
             }
         }
 
-        Console.WriteLine("Largest element " + max);
-        Console.WriteLine("Count of largest element " + count);
+        if(secondLargest == -1)
+        {
+            Console.WriteLine("No largest element found");
+        }
+        else
+        {
+            Console.WriteLine("Second largest element " + secondLargest);
+        }
 
         #endregion
     }
