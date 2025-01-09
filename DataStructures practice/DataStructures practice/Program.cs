@@ -142,39 +142,80 @@ class Program
 
 
 
-        ///PROBLEM FOUR
-        // SECOND LARGEST ELEMENT IN AN ARRAY
+        /////PROBLEM FOUR
+        //// SECOND LARGEST ELEMENT IN AN ARRAY
 
-        int[] arr = { 12, 35, 1, 10, 34, 1 };
+        //int[] arr = { 12, 35, 1, 10, 34, 1 };
 
-        int largest = -1; int secondLargest = -1;
+        //int largest = -1; int secondLargest = -1;
 
-        // finding the second largest element
-        for (int i = 0; i < arr.Length; i++) 
+        //// finding the second largest element
+        //for (int i = 0; i < arr.Length; i++) 
+        //{
+
+        //    // If arr[i] > largest, update second largest with
+        //    // largest and largest with arr[i]
+        //    if (arr[i] > largest)
+        //    {
+        //        secondLargest = largest;
+        //        largest = arr[i];
+        //    }  // If arr[i] < largest and arr[i] > second largest, 
+        //    // update second largest with arr[i]
+        //    else if (arr[i] <
+        //    largest && arr[i] > secondLargest)
+        //    {
+        //        secondLargest = arr[i];
+
+        //    }
+        //}
+
+        //if(secondLargest == -1)
+        //{
+        //    Console.WriteLine("No largest element found");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Second largest element " + secondLargest);
+        //}
+
+
+        ///PROBLEM FIVE
+        //LARGEST THREE DISTINCT ELEMENTS IN AN ARRAY
+
+        //Efficient solution, One traversal
+        int[] arr = { 12, 13, 1, 10, 34, 1 };
+
+        int fst = int.MinValue, sec = int.MinValue, thd = int.MinValue;
+
+        foreach (int x in arr)
         {
-
-            // If arr[i] > largest, update second largest with
-            // largest and largest with arr[i]
-            if (arr[i] > largest)
+            if (x > fst)
             {
-                secondLargest = largest;
-                largest = arr[i];
-            }  // If arr[i] < largest and arr[i] > second largest, 
-            // update second largest with arr[i]
-            else if (arr[i] < largest && arr[i] > secondLargest)
+                thd = sec;
+                sec = fst;
+                fst = x;
+            }
+            else if (x > sec && x != fst)
             {
-                secondLargest = arr[i];
-                
+                thd = sec;
+                sec = x;
+            }
+            else if (x > thd && x != sec && x != fst)
+            {
+                thd = x;
             }
         }
 
-        if(secondLargest == -1)
+        List<int> res = new List<int>();
+
+        if (fst != int.MinValue) res.Add(fst);
+        if (sec != int.MinValue) res.Add(sec);
+        if (thd != int.MinValue) res.Add(thd);
+
+        // Output the result
+        foreach (var num in res)
         {
-            Console.WriteLine("No largest element found");
-        }
-        else
-        {
-            Console.WriteLine("Second largest element " + secondLargest);
+            Console.WriteLine(num);
         }
 
         #endregion
