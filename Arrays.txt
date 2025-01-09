@@ -431,6 +431,96 @@ The idea is to keep track of the largest and second largest element while traver
 If arr[i] > largest, update second largest with largest and largest with arr[i].
 Else If arr[i] < largest and arr[i] > second largest, update second largest with arr[i]. 
 
+C# SOLUTION
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // Function to return three largest elements
+    public static List<int> Get3Largest(int[] arr)
+    {
+        int fst = int.MinValue, sec = int.MinValue, thd = int.MinValue;
+
+        foreach (int x in arr)
+        {
+            // If current element is greater than fst
+            if (x > fst)
+            {
+                thd = sec;
+                sec = fst;
+                fst = x;
+            }
+            // If x is between fst and sec
+            else if (x > sec && x != fst)
+            {
+                thd = sec;
+                sec = x;
+            }
+            // If x is between sec and thd
+            else if (x > thd && x != sec && x != fst)
+                thd = x;
+        }
+
+        List<int> res = new List<int>();
+        if (fst == int.MinValue) return res;
+        res.Add(fst);
+        if (sec == int.MinValue) return res;
+        res.Add(sec);
+        if (thd == int.MinValue) return res;
+        res.Add(thd);
+
+        return res;
+    }
+
+    static void Main()
+    {
+        int[] arr = {12, 13, 1, 10, 34, 1};
+        List<int> res = Get3Largest(arr);
+        foreach (int x in res)
+            Console.Write(x + " ");
+        Console.WriteLine();
+    }
+}
+
+JAVASCRIPT SOLUTION
+
+function get3largest(arr) {
+    let fst = -Infinity, sec = -Infinity, thd = -Infinity;
+
+    arr.forEach(x => {
+        // If current element is greater than fst
+        if (x > fst) {
+            thd = sec;
+            sec = fst;
+            fst = x;
+        }
+        // If x is between fst and sec
+        else if (x > sec && x !== fst) {
+            thd = sec;
+            sec = x;
+        }
+        // If x is between sec and thd
+        else if (x > thd && x !== sec && x !== fst) {
+            thd = x;
+        }
+    });
+
+    let res = [];
+    if (fst !== -Infinity) res.push(fst);
+    if (sec !== -Infinity) res.push(sec);
+    if (thd !== -Infinity) res.push(thd);
+
+    return res;
+}
+
+// Driver code
+let arr = [12, 13, 1, 10, 34, 1];
+let res = get3largest(arr);
+console.log(res.join(' '));
+
+
 
 
 
