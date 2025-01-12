@@ -665,6 +665,89 @@ Explanation: 5 is greater than all the elements to its right i.e., [2], therefor
 
 
 
+SOLUTION : EXPECTED APPROACH - USING SUFFIX MAXIMUM
+
+The idea is to scan all the elements from right to left in an array and keep track of the maximum till now. When the maximum changes its value, add it to the result. Finally reverse the result 
+
+C#
+
+using System;
+using System.Collections.Generic;
+
+class GfG {
+  
+    // Function to find the leaders in an array
+    static List<int> Leaders(int[] arr){
+        List<int> result = new List<int>();
+        int n = arr.Length;
+
+        // Start with the rightmost element
+        int maxRight = arr[n - 1];
+
+        // Rightmost element is always a leader
+        result.Add(maxRight);
+
+        // Traverse the array from right to left
+        for (int i = n - 2; i >= 0; i--) {
+            if (arr[i] >= maxRight) {
+                maxRight = arr[i];
+                result.Add(maxRight);
+            }
+        }
+
+        // Reverse the result list to maintain original
+        // order
+        result.Reverse();
+
+        return result;
+    }
+
+    static void Main(){
+        int[] arr = { 16, 17, 4, 3, 5, 2 };
+        List<int> result = Leaders(arr);
+
+        foreach(int res in result){
+            Console.Write(res + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+JAVASCRIPT
+// Function to find the leaders in an array
+function leaders(arr)
+{
+    const result = [];
+    const n = arr.length;
+
+    // Start with the rightmost element
+    let maxRight = arr[n - 1];
+
+    // Rightmost element is always a leader
+    result.push(maxRight);
+
+    // Traverse the array from right to left
+    for (let i = n - 2; i >= 0; i--) {
+        if (arr[i] >= maxRight) {
+            maxRight = arr[i];
+            result.push(maxRight);
+        }
+    }
+
+    // Reverse the result array to maintain
+    // original order
+    result.reverse();
+
+    return result;
+}
+
+// Driver code
+const arr = [ 16, 17, 4, 3, 5, 2 ];
+const result = leaders(arr);
+console.log(result.join(" "));
+
+
+
 
 
 
