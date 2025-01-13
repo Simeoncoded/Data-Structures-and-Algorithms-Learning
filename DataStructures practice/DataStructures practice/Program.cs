@@ -179,44 +179,48 @@ class Program
         //}
 
 
-        ///PROBLEM FIVE
-        //LARGEST THREE DISTINCT ELEMENTS IN AN ARRAY
+        /////PROBLEM FIVE
+        ////LARGEST THREE DISTINCT ELEMENTS IN AN ARRAY
 
-        //Efficient solution, One traversal
-        int[] arr = { 12, 13, 1, 10, 34, 1 };
+        ////Efficient solution, One traversal
+        //int[] arr = { 12, 13, 1, 10, 34, 1 };
 
-        int fst = int.MinValue, sec = int.MinValue, thd = int.MinValue;
+        //int fst = int.MinValue, sec = int.MinValue, thd = int.MinValue;
 
-        foreach (int x in arr)
-        {
-            if (x > fst)
-            {
-                thd = sec;
-                sec = fst;
-                fst = x;
-            }
-            else if (x > sec && x != fst)
-            {
-                thd = sec;
-                sec = x;
-            }
-            else if (x > thd && x != sec && x != fst)
-            {
-                thd = x;
-            }
-        }
+        //foreach (int x in arr)
+        //{
+        //    if (x > fst)
+        //    {
+        //        thd = sec;
+        //        sec = fst;
+        //        fst = x;
+        //    }
+        //    else if (x > sec && x != fst)
+        //    {
+        //        thd = sec;
+        //        sec = x;
+        //    }
+        //    else if (x > thd && x != sec && x != fst)
+        //    {
+        //        thd = x;
+        //    }
+        //}
 
-        List<int> res = new List<int>();
+        //List<int> res = new List<int>();
 
-        if (fst != int.MinValue) res.Add(fst);
-        if (sec != int.MinValue) res.Add(sec);
-        if (thd != int.MinValue) res.Add(thd);
+        //if (fst != int.MinValue) res.Add(fst);
+        //if (sec != int.MinValue) res.Add(sec);
+        //if (thd != int.MinValue) res.Add(thd);
 
-        // Output the result
-        foreach (var num in res)
-        {
-            Console.WriteLine(num);
-        }
+        //// Output the result
+        //foreach (var num in res)
+        //{
+        //    Console.WriteLine(num);
+        //}
+
+        ///PROBLEM SIX
+        ///LEADERS IN AN ARRAY
+        
 
         #endregion
     }
