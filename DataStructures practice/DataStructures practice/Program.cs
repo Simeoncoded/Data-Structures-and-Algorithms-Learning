@@ -220,8 +220,31 @@ class Program
 
         ///PROBLEM SIX
         ///LEADERS IN AN ARRAY
-        
+        int[] arr = { 16, 17, 4, 3, 5, 2 };
 
+        int n = arr.Length;
+
+        int maxRight = arr[n - 1];
+
+        List<int> res = new List<int>();
+
+        res.Add(maxRight);
+
+        for(int i = n - 2; i >= 0; i--)
+        {
+            if(arr[i] > maxRight)
+            {
+                maxRight = arr[i];
+                res.Add(maxRight);
+            }
+        }
+
+        res.Reverse();
+
+        foreach (int i in res)
+        {
+            Console.WriteLine(i);
+        }
         #endregion
     }
 }
