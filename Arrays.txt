@@ -836,6 +836,7 @@ if (arraySortedOrNot(arr, n)) {
     console.log("No");
 }
 
+8. REMOVE DUPLICATES FROM SORTED
 
 
 
