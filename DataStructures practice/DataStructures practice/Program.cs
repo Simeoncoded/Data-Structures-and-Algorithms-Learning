@@ -218,33 +218,63 @@ class Program
         //    Console.WriteLine(num);
         //}
 
-        ///PROBLEM SIX
-        ///LEADERS IN AN ARRAY
-        int[] arr = { 16, 17, 4, 3, 5, 2 };
+        /////PROBLEM SIX
+        /////LEADERS IN AN ARRAY
+        //int[] arr = { 16, 17, 4, 3, 5, 2 };
+
+        //int n = arr.Length;
+
+        //int maxRight = arr[n - 1];
+
+        //List<int> res = new List<int>();
+
+        //res.Add(maxRight);
+
+        //for(int i = n - 2; i >= 0; i--)
+        //{
+        //    if(arr[i] > maxRight)
+        //    {
+        //        maxRight = arr[i];
+        //        res.Add(maxRight);
+        //    }
+        //}
+
+        //res.Reverse();
+
+        //foreach (int i in res)
+        //{
+        //    Console.WriteLine(i);
+        //}
+
+
+        ///PROBLEM SEVEN
+        ///CHECK IF AN ARRAY IS SORTED
+
+        int[] arr = { 20, 23, 23, 45, 78, 88 };
 
         int n = arr.Length;
 
-        int maxRight = arr[n - 1];
-
-        List<int> res = new List<int>();
-
-        res.Add(maxRight);
-
-        for(int i = n - 2; i >= 0; i--)
+        // Array has one or no element
+        if (n == 0 || n == 1)
         {
-            if(arr[i] > maxRight)
+            Console.WriteLine("True");
+            return;
+        }
+
+        bool isSorted = true;
+
+        for (int i = 1; i < n; i++)
+        {
+            if (arr[i - 1] > arr[i])
             {
-                maxRight = arr[i];
-                res.Add(maxRight);
+                isSorted = false;
+                break; 
             }
         }
 
-        res.Reverse();
+        Console.WriteLine(isSorted ? "True" : "False");
 
-        foreach (int i in res)
-        {
-            Console.WriteLine(i);
-        }
+
         #endregion
     }
 }
