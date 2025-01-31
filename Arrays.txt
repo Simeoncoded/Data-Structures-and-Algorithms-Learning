@@ -1002,6 +1002,46 @@ Input: arr[] = {4, 5, 1, 2}
 Output: {2, 1, 5, 4}
 Explanation: The first element 4 moves to last position, the second element 5 moves to second last and so on.
 
+C# CODE
+
+// C# Program to reverse an array using Two Pointers
+
+using System;
+
+class GfG {
+  
+    // function to reverse an array
+    static void reverseArray(int[] arr) {
+      
+        // Initialize left to the beginning and right to the end
+        int left = 0, right = arr.Length - 1;
+
+        // Iterate till left is less than right
+        while (left < right) {
+          
+            // Swap the elements at left and right position
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            // Increment the left pointer
+            left++;
+
+            // Decrement the right pointer
+            right--;
+        }
+    }
+
+    static void Main() {
+        int[] arr = { 1, 4, 3, 2, 6, 5 };
+
+        reverseArray(arr);
+
+        for (int i = 0; i < arr.Length; i++)
+            Console.Write(arr[i] + " ");
+    }
+}
+
 
 
 
