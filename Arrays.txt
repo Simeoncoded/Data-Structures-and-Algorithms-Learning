@@ -1075,6 +1075,27 @@ console.log(arr.join(" "));
 Rotate an Array – Clockwise or Right
 Rotations in the array is defined as the process of rearranging the elements in an array by shifting each element to a new position. This is mostly done by rotating the elements of the array clockwise or counterclockwise.
 
+a. 1. Rotate one by one
+At each iteration, shift the elements by one position to the right in a circular fashion (the last element becomes the first). Perform this operation d times to rotate the elements to the right by d positions.
+
+
+Illustration:
+
+ Let us take arr[] = {1, 2, 3, 4, 5, 6}, d = 2.
+
+
+First Step:
+        => Rotate to right by one position.
+        => arr[] = {6, 1, 2, 3, 4, 5}
+Second Step:
+        => Rotate again to right by one position
+        => arr[] = {5, 6, 1, 2, 3, 4}
+Rotation is done 2 times.
+So the array becomes arr[] = {5, 6, 1, 2, 3, 4}
+
+
+
+
 
 
 
