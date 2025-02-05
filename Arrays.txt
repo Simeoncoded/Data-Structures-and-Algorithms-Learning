@@ -1071,6 +1071,9 @@ reverseArray(arr);
 
 console.log(arr.join(" "));
 
+11. ARRAY ROTATION
+Rotate an Array – Clockwise or Right
+Rotations in the array is defined as the process of rearranging the elements in an array by shifting each element to a new position. This is mostly done by rotating the elements of the array clockwise or counterclockwise.
 
 
 
